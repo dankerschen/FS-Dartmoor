@@ -5,7 +5,7 @@ Exmoor cards. This adapted version builds on Mikko Saari’s original
 calculator and combines the interface, styles, scripts, and decorative
 SVG artwork in a single HTML file.
 
-Find the calculator here: [https://dankerschen.github.io/FS-Dartmoor/](https://dankerschen.github.io/FS-Dartmoor/)
+Find the calculator here: [https://dankerschen.github.io/Forest-Shuffle-Calculators/](https://dankerschen.github.io/Forest-Shuffle-Calculators/)
 
 ## Features
 
