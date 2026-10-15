@@ -1,69 +1,77 @@
-# Forest Shuffle: Dartmoor — Score Calculator
+# Forest Shuffle scoring: three games in one page
 
-A browser-based score calculator for Forest Shuffle: Dartmoor, including
-Exmoor cards. This adapted version builds on Mikko Saari’s original
-calculator and combines the interface, styles, scripts, and decorative
-SVG artwork in a single HTML file.
+An unofficial, offline-friendly scoring calculator for the card game **Forest Shuffle**
+(Lookout Games), in a single `index.html`:
 
-Find the calculator here: [https://dankerschen.github.io/Forest-Shuffle-Calculators/](https://dankerschen.github.io/Forest-Shuffle-Calculators/)
+| Game | Scoring |
+|------|---------|
+| **Forest Shuffle** (base game) | with the Alpine, Woodland Edge and Exploration expansions |
+| **Forest Shuffle: Dartmoor** | with the Exmoor expansion |
+| **Forest Shuffle: Smoky Mountains** | |
+
+Each game keeps its own calculation (nothing is mixed between games), but they share one
+layout, one look and one set of tools. Switch games with the buttons in the banner
+(`#forest`, `#moor` and `#smoky` in the URL open a game directly).
 
 ## Features
 
-- Separate player forests on the same device and an all-player score overview.
-- Live scoring explanations with a show/hide toggle.
-- Per-copy checkmarks for scoring conditions and counters for symbol totals.
-- English, French, and German language selection.
-- Light and dark modes with a mobile-friendly nature-themed layout.
-- Browser autosave and JSON session backup/restore.
-- Combined score export to BG Stats for review and saving in the app.
+- Tap a card to add it, set per-copy conditions and symbol counts; the small scoring
+  notes explain each card's points.
+- Several players, a live score banner, sticky player and section navigation.
+- Expansion groups you can switch on and off per game.
+- **English, French and German**, switchable from any game and shared by all three. It
+  follows the browser language on the first visit and is remembered afterwards.
+- Light and dark mode, shared by all three games.
+- Rules notes on or off; session backup and restore (JSON); send results to
+  [BG Stats](https://www.bgstatsapp.com/) or copy the import link.
+- Everything is stored in your browser (local storage). No server, no account, no
+  tracking, no external scripts, fonts or images.
 
-Some unverified card names remain in English.
+## Use it
 
-## Getting started
+Open `index.html` in a browser, or host the repository with GitHub Pages
+(Settings, Pages, deploy from the `main` branch, root folder). The `.nojekyll` file is
+only there so Pages serves the file as it is.
 
-Open `index.html` in your browser. No build step or backend is required.
+## Languages and sources
 
-Browser autosave is local to the browser and device. Use the backup
-feature before clearing browser data or moving to another device.
+German card names follow Lookout's official German appendices; Dartmoor's French and German
+texts build on Mikko Saari's tool. French names for the base game and Alpine follow the
+French rulebook and a French score sheet. The other expansions and Smoky Mountains use
+common French species names, because no French appendix exists, so they may differ from the
+printed cards. Please open an issue for any wrong name or term.
 
-BG Stats export requires the app on the receiving device.
+Official documents (PDF, Lookout): see the footer of each game in the page, or
+[Forest Shuffle](https://www.lookout-spiele.de/en/games/forrestshuffle.html),
+[Dartmoor](https://www.lookout-spiele.de/en/games/dartmoor.html),
+[Smoky Mountains](https://www.lookout-spiele.de/en/games/smoky.html).
+
+## Known limitations
+
+- Nine Smoky Mountains cards still use manual points (Yellow Birch, White-Footed Mouse,
+  White-Tailed Deer, Wintergreen, Wood Frog, Wood Thrush, Yellow-Bellied Sapsucker,
+  Yellow Bullhead, Yellow Perch).
+- The base game's promo cards have not been fully audited.
+- Browser and device testing is limited. Always check important scores against the
+  official rulebook and appendix.
+- AI-assisted work can contain mistakes (see below).
 
 ## Credits
 
-- Original calculator: Mikko Saari / msaari.
-- Original source:
-  [Codeberg — forestshuffle-dartmoor](https://codeberg.org/msaari/forestshuffle-dartmoor).
-- Author’s blog:
-  [Mikko’s Gameblog](https://mikkosgameblog.com/).
-- Exmoor adaptation credited in the original project: nils-codes.
+- Game: Forest Shuffle, Forest Shuffle: Dartmoor and Smoky Mountains, design Kosch,
+  illustrations Toni Llobet and Judit Piella, published by Lookout Games (Lookout GmbH).
+  This project is independent and unofficial and contains no official artwork.
 - Design idea: Dan Kerschen.
-- Forest Shuffle: Dartmoor is designed by Kosch and published by Lookout Games.
+- Code and layout build on [Sören Oldag's Forest Shuffle scoring project](https://github.com/soldag/forest-shuffle-scoring)
+  (MIT) and [Mikko Saari's Dartmoor scoring tool](https://codeberg.org/msaari/forestshuffle-dartmoor)
+  (MIT, Exmoor expansion by nils-codes).
+- Illustrations: AI-generated watercolour-and-ink pictures made for this page with
+  Nano Banana 2 (Google), from prompts written with Claude (Anthropic).
+- Made with AI: developed with help from Perplexity and Claude (Anthropic) for research, code,
+  text, interface design and translation.
 
-This is an unofficial scoring companion. Consult the printed cards and
-official rules if a scoring discrepancy occurs.
+## Licence
 
-## License
-
-The original author’s MIT license notice is retained below.
-
-MIT License
-
-Copyright (c) 2025 msaari
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+MIT for the original parts, see [LICENSE](LICENSE). Third-party code, translation
+sources and the AI-image terms are listed in [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md).
+Game names, rules and artwork remain the property of Lookout GmbH.
